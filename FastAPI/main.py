@@ -19,7 +19,7 @@ class HousingData(BaseModel):
 
 # Load pre-trained model
 try:
-    with open('../model/linear_model.pkl', 'rb') as f:
+    with open('model/linear_model.pkl', 'rb') as f:
         model = pickle.load(f)
 except Exception as e:
     raise HTTPException(status_code=500, detail=str(e))
